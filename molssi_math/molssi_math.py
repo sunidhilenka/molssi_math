@@ -20,8 +20,20 @@ def mean(num_list):
     mean_list : float
       The mean of the list
     """
-    mean_list = sum(num_list) / len(num_list)
+    #Check that input is type list
 
+    if not isinstance(num_list, list):
+      raise TypeError('Invalid input %s - Input must be type int' %(num_list))
+
+    #Check that list is not empty
+    if len(num_list) == 0:
+        raise ValueError('list is empty')
+
+    try:
+
+        mean_list = sum(num_list) / len(num_list)
+    except TypeError:
+        raise TypeError('Cannot calculate mean of list-all list of elements must be  numeric')
     return mean_list
 
 

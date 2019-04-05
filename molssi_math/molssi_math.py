@@ -2,10 +2,25 @@
 molssi_math.py
 molssi_bestpractices
 
-Handles the primary functions
+some math functions.
 """
+def mean(num_list):
+    """
+    Calculate the mean/average of a lis of nmbers.
+    Paameters
+    ------------
 
+    num_list :lis
+       The list to take the average of
 
+    Returns
+    -----------
+    mean_list : float
+      The mean of the list
+    """
+    mean_list = sum(num_list)/len(num_list)
+    
+    return  mean_list
 def canvas(with_attribution=True):
     """
     Placeholder function to show example docstring (NumPy format)
